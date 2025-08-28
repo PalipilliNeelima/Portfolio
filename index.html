@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palipilli Neelima | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --accent-color: #4f46e5;
+      --card-bg: #f4f4f4;
+    }
+
+    body.dark {
+      --bg-color: #1a1a1a;
+      --text-color: #f4f4f4;
+      --accent-color: #818cf8;
+      --card-bg: #2a2a2a;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease-in-out;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      background: var(--card-bg);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background: var(--accent-color);
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--card-bg);
+      margin-top: 3rem;
+    }
+
+    .contact a {
+      color: var(--accent-color);
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Palipilli Neelima</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>Results-driven Artificial Intelligence professional with expertise in Python and Frontend development. 
+        Adept at building innovative solutions to solve real-world problems, with a proven track record in delivering 
+        high-accuracy AI applications. Proficient in developing scalable web interfaces. Recognized for strong 
+        project management, problem-solving, and team collaboration skills.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">Bachelor’s Degree at Aditya Degree College (CGPA: 9.23/10)</div>
+      <div class="card">Class 12th - Sri Chaitanya Junior College (95.2%)</div>
+      <div class="card">Class 10th - Mahatma Gandhi Municipal High School (GPA: 10/10)</div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">Programming: C, Python, Java Basics, HTML, CSS</div>
+      <div class="card">Databases: MongoDB</div>
+      <div class="card">Frameworks: Bootstrap</div>
+      <div class="card">Tools: Anaconda, VS Code, Jupyter Notebook</div>
+      <div class="card">Soft Skills: Communication, Time Management, Critical Thinking, Collaboration</div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>Face Mask Recognition</h3>
+        <p>AI-powered real-time face mask detection system with 95% accuracy. Integrated with webcam interface for public safety compliance.</p>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="card">Python for Data Science | Cisco Programming in C | Hackerrank Problem Solving</div>
+      <div class="card">Design Thinking | Business Communication | Business Writing Techniques</div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card contact">
+        <p>Email: <a href="mailto:palipillineelima04@gmail.com">palipillineelima04@gmail.com</a></p>
+        <p>Phone: <a href="tel:+917386803023">+91 7386803023</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/palipillineelima" target="_blank">linkedin.com/in/palipillineelima</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Palipilli Neelima | Portfolio Website</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+      let btn = document.querySelector(".theme-toggle");
+      if (document.body.classList.contains("dark")) {
+        btn.textContent = "☀️";
+      } else {
+        btn.textContent = "🌙";
+      }
+    }
+  </script>
+</body>
+</html>
